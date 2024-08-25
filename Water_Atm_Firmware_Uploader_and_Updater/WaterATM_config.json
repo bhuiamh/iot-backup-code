@@ -1,0 +1,39 @@
+{
+ "broker": "ctgbroker.drinkwellatm.com",
+ "port": "1883",
+ "timestampServer": "time.drinkwellatm.com",
+ "timestampServerPort": "8090",
+ "timestampServerApi": "/get-current-time",
+ "password": "94951561",
+ "device_id": "DV324",
+ "serial_baud": 115200,
+ "serialPort": "/dev/ttyACM0",
+ "publish_topic_verify": "request/verify",
+ "publish_topic_dispense": "request/dispense",
+ "subscribtion_topic": "response/",
+ "costOfWater": "0.4",
+ "debug_mode": false,
+ "old_topic": false,
+ "run-avrdude": ".hex",
+ "reboot_on_file_arrive": [
+  "main.py",
+  "reboot"
+ ],
+ "file_name_plase": {
+  "sysctl.conf": "/etc/",
+  "inittab": "/etc/",
+  "network": "/etc/config/",
+  "python_init": "/etc/init.d/",
+  "Firmware_Updater.py": "/root/",
+  "main.py": "/root/"
+ },
+ "file_name_chmod": {
+  "python_init": 777,
+  "Firmware_Updater.py": 777,
+  "main.py": 777
+ },
+ "routine_file_to_enable": {
+  "python_init": 1
+ },
+ "publish_topic": "request/"
+}

@@ -1,0 +1,19 @@
+Login With SSH_ in terminal:
+=============================================================================================
+sshpass -p "nybsysiot" ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -o StrictHostKeyChecking=no root@10.130.1.1
+---------------------------------------------------------------------------------------------
+Troubleshoot:
+### If ssh-keygen is required follow the dependencies 
+with :
+ssh-keygen -f "/home/["user_name"]/.ssh/known_hosts" -R "10.130.1.1"
+=============================================================================================
+
+For Copying from host to remote Device:
+=============================================================================================
+sshpass -p "nybsysiot" scp -oKexAlgorithms=+diffie-hellman-group1-sha1 -o StrictHostKeyChecking=no ["file_name"] root@10.130.1.1:/root/
+=============================================================================================
+
+sshfs -oKexAlgorithms=+diffie-hellman-group1-sha1 -o StrictHostKeyChecking=no root@192.168.1.101:/ ./device_ssh_mount/
+
+BUG:
+	mosquitto_pub -h broker.drinkwellatm.com -p 1883 -t "response/TS001" -m "{\"DeviceID\":\"TS001\",\"UID\":\"230956601\",\"Water_Balance\":193.39,\"Dispensed\":0.0,\"Balance\":77.35,\"MessageType\":1,\"Time\":1612182165,\"StatusCode\":1,\"Message\":\"Card Amt.=77.35 tk|Water Bal.=193.39 Lt\",\"Calibration\":0.76}"

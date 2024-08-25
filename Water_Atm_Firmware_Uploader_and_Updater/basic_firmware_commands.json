@@ -1,0 +1,14 @@
+{"ssh_base_conf":"ssh-keygen -f \"/root/.ssh/known_hosts\" -R ",
+ "file_copier": "sshpass -p \"nybsysiot\" scp -oKexAlgorithms=+diffie-hellman-group1-sha1 -o StrictHostKeyChecking=no ",
+ "command_over_ssh": "sshpass -p \"nybsysiot\" ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -o StrictHostKeyChecking=no ",
+ "user":"root",
+ "host":"10.130.1.1",
+ "destinations_and_files":{
+ "/root/" : {"Firmware_Updater.py":"777","WaterATM_config.json":"766","waterAtm.ino.mega.hex":"777","main.py":"777"},
+ "/etc/":{"sysctl.conf":"664","inittab":"664"},
+ "/etc/config/":{"network":"644"},
+ "/etc/init.d/":{"python_init":"777"},
+ "enable" :["python_init"],
+ "run-avrdude":["waterAtm.ino.mega.hex"]
+ }
+}

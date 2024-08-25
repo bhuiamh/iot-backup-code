@@ -1,0 +1,33 @@
+{
+ "broker": "broker.drinkwellatm.com",
+ "port": "1883",
+ "password": "72997716",
+ "device_id": "DV056",
+ "serial_baud": 115200,
+ "serialPort": "/dev/ttyACM0",
+ "publish_topic": "request",
+ "subscribtion_topic": "",
+ "costOfWater": "0.4",
+ "debug_mode": 0,
+ "run-avrdude": ".hex",
+ "reboot_on_file_arrive": [
+  "main.py",
+  "reboot"
+ ],
+ "file_name_plase": {
+  "sysctl.conf": "/etc/",
+  "inittab": "/etc/",
+  "network": "/etc/config/",
+  "python_init": "/etc/init.d/",
+  "Firmware_Updater.py": "/root/",
+  "main.py": "/root/"
+ },
+ "file_name_chmod": {
+  "python_init": 777,
+  "Firmware_Updater.py": 777,
+  "main.py": 777
+ },
+ "routine_file_to_enable": {
+  "python_init": 1
+ }
+}

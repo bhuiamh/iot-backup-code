@@ -1,0 +1,2 @@
+broker,port,password,device_id,serial_baud,serialPort,publish_topic,subscribtion_topic,cost_of_water,debug_mode,deployed
+3.129.251.210,1883,poc14325s!,USA_DV001,115200,/dev/ttyATH0,request/,response/,0.4,0,1
