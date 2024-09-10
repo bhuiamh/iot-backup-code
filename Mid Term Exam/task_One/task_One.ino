@@ -46,6 +46,9 @@ void loop() {
   // Basic error checking for sensor reading
   if (tempC < -55 || tempC > 125) {
     Serial.println("Invalid temperature reading");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Invalid Temperature");
     return;
   }
 

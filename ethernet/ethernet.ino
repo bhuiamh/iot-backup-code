@@ -4,7 +4,10 @@
 #include <LiquidCrystal_I2C.h>
 
 // MAC address for Ethernet shield
-byte mac[] = { 0xDE, 0xBD, 0xBE, 0xEF, 0xFE, 0xED };
+byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0x00, 0x01 };
+
+
+
 
 // Initialize the LCD with the I2C address and dimensions
 LiquidCrystal_I2C lcd(0x27, 20, 4); // Address 0x27, 20 columns, 4 rows
